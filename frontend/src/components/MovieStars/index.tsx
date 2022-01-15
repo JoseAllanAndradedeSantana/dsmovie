@@ -9,8 +9,9 @@ function MovieStars() {
             <StarFull />
             <StarFull />
             <StarFull />
-            <StarHalf />
-            <StarEmpty />
+            <StarFull />
+            <StarFull />
+            
         </div>
 
     );
