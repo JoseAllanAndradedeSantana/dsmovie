@@ -3,19 +3,19 @@ package com.joseallan.dsmovie.dto;
 public class ScoreDTO {
 	//email, id do filme e valor da avaliação
 	
-	private Long moveid;
+	private Long movieId;
 	private String email;
 	private Double score;
 	
 	public ScoreDTO() {
 	}
 
-	public Long getMoveid() {
-		return moveid;
+	public Long getMovieId() {
+		return movieId;
 	}
 
-	public void setMoveid(Long moveid) {
-		this.moveid = moveid;
+	public void setMovieId(Long movieId) {
+		this.movieId = movieId;
 	}
 
 	public String getEmail() {
@@ -33,6 +33,8 @@ public class ScoreDTO {
 	public void setScore(Double score) {
 		this.score = score;
 	}
+
+	
 	
 	
 }
