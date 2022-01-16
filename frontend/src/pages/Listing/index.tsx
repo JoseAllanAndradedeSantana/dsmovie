@@ -22,16 +22,13 @@ function Listing() {
     });
 
     useEffect(() => {
-        axios.get(`${BASE_URL}/movies?size=12&page=${pageNumber}`).then(response => {
+        axios.get(`${BASE_URL}/movies?size=12&page=${pageNumber}$sort=title`).then(response => {
             const data = response.data as MoviePage;
             //console.log(data);
             //setPageNumber(data.number);
             setPage(data);
         });
     }, [pageNumber]);
-
-
-
     return (
         <>
             <Pagination />
