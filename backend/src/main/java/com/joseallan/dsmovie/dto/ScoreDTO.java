@@ -1,8 +1,6 @@
 package com.joseallan.dsmovie.dto;
 
 public class ScoreDTO {
-	//email, id do filme e valor da avaliação
-	
 	private Long movieId;
 	private String email;
 	private Double score;
