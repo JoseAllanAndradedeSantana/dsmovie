@@ -7,9 +7,9 @@ import { validateEmail } from 'utils/validate';
 import './style.css';
 
 type Props = {
-    movieId : String;
+    movieId: String;
 }
-function FormCard({ movieId } : Props) {
+function FormCard({ movieId }: Props) {
 
     const navigate = useNavigate();
 
@@ -17,17 +17,17 @@ function FormCard({ movieId } : Props) {
 
     useEffect(() => {
         axios.get(`${BASE_URL}/movies/${movieId}`)
-        .then(response => {
-            setMovie(response.data);
-        });
-    },[movieId]);
+            .then(response => {
+                setMovie(response.data);
+            });
+    }, [movieId]);
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
 
         event.preventDefault();
         const email = (event.target as any).email.value;
         const score = (event.target as any).score.value;
-        if(!validateEmail(email)){
+        if (!validateEmail(email)) {
             return;
         }
         const config: AxiosRequestConfig = {
@@ -47,7 +47,7 @@ function FormCard({ movieId } : Props) {
 
         });
 
-       // console.log(email,score);
+         console.log(email,score);
 
     }
 
@@ -72,7 +72,9 @@ function FormCard({ movieId } : Props) {
                         </select>
                     </div>
                     <div className="dsmovie-form-btn-container">
-                        <button type="submit" className="btn btn-primary dsmovie-btn">Salvar</button>
+                       
+                            <button type="submit" className="btn btn-primary dsmovie-btn">Salvar</button>
+                        
                     </div>
                 </form >
                 <Link to="/">
