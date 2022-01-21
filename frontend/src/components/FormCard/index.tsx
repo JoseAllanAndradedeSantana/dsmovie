@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Movie } from 'types/movie';
 import { BASE_URL } from 'utils/requetes';
-//import { validateEmail } from 'utils/validate';
+import { validateEmail } from 'utils/validate';
 import './style.css';
 
 type Props = {
@@ -27,9 +27,9 @@ function FormCard({ movieId }: Props) {
         event.preventDefault();
         const email = (event.target as any).email.value;
         const score = (event.target as any).score.value;
-        //if (!validateEmail(email)) {
-          //  return;
-        //}
+        if (!validateEmail(email)) {
+            return;
+        }
         const config: AxiosRequestConfig = {
             baseURL: BASE_URL,
             method: 'PUT',

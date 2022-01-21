@@ -34,45 +34,31 @@ public class ScoreService {
 			user = userRepository.saveAndFlush(user);
 			}
 		Movie movie = movieRepository.findById(dto.getMovieId()).get();
-<<<<<<< HEAD
-=======
-		
->>>>>>> 8f2064953850e68e1fa6248ff0a33a9da0596fca
 		Score score = new Score();
 		score.setMovie(movie);
 		score.setUser(user);
 		score.setValue(dto.getScore());
-<<<<<<< HEAD
+		score = scoreRepository.saveAndFlush(score);		
+		score = scoreRepository.saveAndFlush(score);		
 		score = scoreRepository.saveAndFlush(score);
-=======
-		
-		score = scoreRepository.saveAndFlush(score);
-		
->>>>>>> 8f2064953850e68e1fa6248ff0a33a9da0596fca
 		double sum = 0.0;
 		for (Score s : movie.getScores()) {
 			sum = sum + s.getValue();
 		}
-<<<<<<< HEAD
 		double avg = sum / movie.getScores().size();
 		movie.setScore(avg);
 		movie.setCount(movie.getScores().size());
 		movie = movieRepository.save(movie);
-		System.out.println(movie);
-=======
-		
-		double avg = sum / movie.getScores().size();
+		//double avg = sum / movie.getScores().size();
 		
 		movie.setScore(avg);
 		movie.setCount(movie.getScores().size());
 		
 		movie = movieRepository.save(movie);
 		
->>>>>>> 8f2064953850e68e1fa6248ff0a33a9da0596fca
 		return new MovieDTO(movie);
 	}
-	
-	
+
 	
 	
 
