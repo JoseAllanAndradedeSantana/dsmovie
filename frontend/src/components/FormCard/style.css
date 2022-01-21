@@ -54,6 +54,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+<<<<<<< HEAD
 }
 .dsmovie-btn-danger {
     background-color: red;
@@ -64,4 +65,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
+=======
+>>>>>>> 8f2064953850e68e1fa6248ff0a33a9da0596fca
 }

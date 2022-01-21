@@ -27,9 +27,15 @@ function FormCard({ movieId }: Props) {
         event.preventDefault();
         const email = (event.target as any).email.value;
         const score = (event.target as any).score.value;
+<<<<<<< HEAD
      //   if (!validateEmail(email)) {
        //     return;
         //}
+=======
+        if (!validateEmail(email)) {
+            return;
+        }
+>>>>>>> 8f2064953850e68e1fa6248ff0a33a9da0596fca
         const config: AxiosRequestConfig = {
             baseURL: BASE_URL,
             method: 'PUT',
@@ -78,7 +84,11 @@ function FormCard({ movieId }: Props) {
                     </div>
                 </form >
                 <Link to="/">
+<<<<<<< HEAD
                     <button className="btn btn-danger dsmovie-btn-danger mt-3">Cancelar</button>
+=======
+                    <button className="btn btn-primary dsmovie-btn mt-3">Cancelar</button>
+>>>>>>> 8f2064953850e68e1fa6248ff0a33a9da0596fca
                 </Link>
             </div >
         </div >
