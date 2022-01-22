@@ -47,7 +47,7 @@ function FormCard({ movieId }: Props) {
 
         });
 
-         console.log(email,score);
+        console.log(email, score);
 
     }
 
@@ -62,7 +62,7 @@ function FormCard({ movieId }: Props) {
                         <input type="email" className="form-control" id="email" />
                     </div>
                     <div className="form-group dsmovie-form-group">
-                        <label htmlFor="score">Informe sua avaliação</label>
+                        <label htmlFor="score">Informe sua Avaliação</label>
                         <select className="form-control" id="score">
                             <option>1</option>
                             <option>2</option>
@@ -72,9 +72,7 @@ function FormCard({ movieId }: Props) {
                         </select>
                     </div>
                     <div className="dsmovie-form-btn-container">
-                       
-                            <button type="submit" className="btn btn-primary dsmovie-btn">Salvar</button>
-                        
+                        <button type="submit" className="btn btn-primary dsmovie-btn">Salvar</button>
                     </div>
                 </form >
                 <Link to="/">
