@@ -41,11 +41,7 @@ public class ScoreService {
 		score = scoreRepository.saveAndFlush(score);		
 		score = scoreRepository.saveAndFlush(score);		
 		score = scoreRepository.saveAndFlush(score);
-
-		
 		score = scoreRepository.saveAndFlush(score);
-		
-
 		double sum = 0.0;
 		for (Score s : movie.getScores()) {
 			sum = sum + s.getValue();
@@ -55,12 +51,9 @@ public class ScoreService {
 		movie.setCount(movie.getScores().size());
 		movie = movieRepository.save(movie);
 		//double avg = sum / movie.getScores().size();
-		
 		movie.setScore(avg);
 		movie.setCount(movie.getScores().size());
-		
 		movie = movieRepository.save(movie);
-		
 		return new MovieDTO(movie);
 	}
 	
