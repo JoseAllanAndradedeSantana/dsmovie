@@ -41,6 +41,11 @@ public class ScoreService {
 		score = scoreRepository.saveAndFlush(score);		
 		score = scoreRepository.saveAndFlush(score);		
 		score = scoreRepository.saveAndFlush(score);
+
+		
+		score = scoreRepository.saveAndFlush(score);
+		
+
 		double sum = 0.0;
 		for (Score s : movie.getScores()) {
 			sum = sum + s.getValue();
@@ -58,7 +63,6 @@ public class ScoreService {
 		
 		return new MovieDTO(movie);
 	}
-
 	
 	
 
